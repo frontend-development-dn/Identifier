@@ -1,0 +1,1 @@
+export type PromiseResult<T> = Promise<T> | T;

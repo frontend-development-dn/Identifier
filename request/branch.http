@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:3000/Api
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzQ3NDgzMTA3LCJleHAiOjE3NDc0ODQwMDd9.w96BTDEdTRjr7zhC0k20zjoFC0WI2gAqkbbgSifQ7IA
+
+# @name loginForUsers
+POST {{baseUrl}}/Auth/Login
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+
+### Get all users
+GET {{baseUrl}}/Branches
+Accept: application/json
+Authorization: Bearer {{authToken}}
+
+### Get user by ID
+GET {{baseUrl}}/Branches/1
+Accept: application/json
+Authorization: Bearer {{authToken}}
+
+### Create a new user
+POST {{baseUrl}}/Branches
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "id": 1,
+  "name": "dsf",
+  "users": [1, 2]
+}
+
+### Update user by ID
+PATCH {{baseUrl}}/Branches/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "username": "updateduser",
+  "password": "newpassword123"
+}
+
+### Delete user by ID
+DELETE {{baseUrl}}/Branches/1
+Authorization: Bearer {{authToken}}
