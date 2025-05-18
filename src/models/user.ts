@@ -27,6 +27,7 @@ export class User implements IEntity {
     })
     public branchAccess: Branch[]
 
+
     public constructor(id: number, username: string, password: string, createdAt: Date, updatedAt: Date, branches: Branch[]) {
         this.id = id;
         this.username = username;
