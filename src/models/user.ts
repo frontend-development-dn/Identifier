@@ -1,7 +1,6 @@
 import {BeforeInsert, BeforeUpdate, Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
 import * as bcrypt from 'bcrypt';
 import {IEntity} from "../interfaces/IEntity";
-import {PromiseResult} from "../types/promise-result";
 import {Branch} from "./branch";
 
 @Entity()
